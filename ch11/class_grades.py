@@ -1,4 +1,4 @@
-def grade(score):
+def calculate_grade(score):
     if score >= 90 :
         return "A"
     elif score >= 80 :
@@ -11,19 +11,21 @@ def grade(score):
         return "F"
 
 # WAY #1
-# score_file = open("class_grades.txt")
+score_file = open("class_grades.txt")
 
-# score_list = score_file.readlines()
+score_list = score_file.readlines()
 
-# for score in score_list :
-#     print grade(int(score))
+score_file.close()
 
-# score_file.close()
+for score in score_list :
+    print calculate_grade(int(score))
+
+
 
 # WAY #2
 # with open("class_grades.txt") as f:
 #     for score in f:
-#         print grade(int(score))
+#         print calculate_grade(int(score))
 
 
 # WAY #3
@@ -31,7 +33,7 @@ def grade(score):
 
 # score = score_file.readline()
 # while score != '' :
-#     print grade(int(score))
+#     print calculate_grade(int(score))
 #     score = score_file.readline()
 
 # score_file.close()
@@ -43,4 +45,4 @@ def grade(score):
 # score_list = scores.split('\n')
 
 # for score in score_list:
-#     print grade(int(score))
+#     print calculate_grade(int(score))
