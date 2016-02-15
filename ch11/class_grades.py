@@ -11,21 +11,23 @@ def calculate_grade(score):
         return "F"
 
 # WAY #1
-score_file = open("class_grades.txt")
+# score_file = open("class_grades.txt")
 
-score_list = score_file.readlines()
+# score_list = score_file.readlines()
+# print "score_list"
+# print score_list
 
-score_file.close()
+# score_file.close()
 
-for score in score_list :
-    print calculate_grade(int(score))
+# for score in score_list :
+#     print calculate_grade(int(score))
 
 
 
 # WAY #2
-# with open("class_grades.txt") as f:
-#     for score in f:
-#         print calculate_grade(int(score))
+with open("class_grades.txt") as f:
+    for score in f:
+        print calculate_grade(int(score))
 
 
 # WAY #3
@@ -42,7 +44,11 @@ for score in score_list :
 # score_file = open("class_grades.txt")
 
 # scores = score_file.read()
+# score_file.close()
+
 # score_list = scores.split('\n')
 
 # for score in score_list:
 #     print calculate_grade(int(score))
+
+
