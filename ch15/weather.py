@@ -2,7 +2,7 @@ import urllib2
 import json
 from api_keys import *
 
-f = urllib2.urlopen('http://api.wunderground.com/api/' + WEATHER_KEY + '/geolookup/conditions/q/IA/Cedar_Rapids.json')
+f = urllib2.urlopen('http://api.wunderground.com/api/' + WEATHER_KEY + '/geolookup/conditions/q/CA/San_Francisco.json')
 json_string = f.read()
 parsed_json = json.loads(json_string)
 location = parsed_json['location']['city']
