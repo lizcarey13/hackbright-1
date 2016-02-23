@@ -6,7 +6,6 @@ api_url = "https://data.sfgov.org/resource/wwmu-gmzc.json"
 
 def get_film_titles_made_in(year):
     api_url_year = api_url + "?release_year=" + str(year)
-    print api_url_year
     response = urlopen(api_url_year)
     json_obj = load(response)
 
