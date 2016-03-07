@@ -2,7 +2,7 @@ language: python
 python:
   - "2.7"
 # command to install dependencies
-script: python ch19/test_examples.py
+script: python test_examples.py
 branches:
   only:
     - master
