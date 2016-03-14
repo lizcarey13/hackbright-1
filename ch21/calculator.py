@@ -1,5 +1,6 @@
 # definition
-class Calculator:
+class Calculator:   
+
     def add(self, x, y):
         return x + y
 
@@ -12,4 +13,11 @@ class Calculator:
     def divide(self, x, y):
         return x / y
 
-print __name__
+    def dispatch(self, op):
+        dispatch_dict = {
+            '+': self.add,
+            '-': self.subtract,
+            '*': self.multiply,
+            '/': self.divide,
+        }
+        return dispatch_dict.get(op)
