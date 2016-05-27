@@ -20,5 +20,5 @@ def get_tweets(query_text, count):
 
     return tweet_list
 
-print get_tweets('hackbright', 10)
+print (get_tweets('hackbright', 10))
 
